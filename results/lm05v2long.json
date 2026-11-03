@@ -1,0 +1,198 @@
+{
+ "model": "hourglass",
+ "repo": "LM_2021_hourglass-transformer-pytorch",
+ "target_repo": "LM_Dec_Long_Hourglass",
+ "category": "Long",
+ "upstream": "lucidrains/hourglass-transformer-pytorch (MIT)",
+ "unified": [
+  "depth (2, 2, 2) instead of (4, 2, 4) to match the 6-layer budget"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm05v2long",
+ "started": "2026-10-26 15:27:46",
+ "smoke": false,
+ "levels": {
+  "4": {
+   "queries": 16,
+   "distinct": false,
+   "steps": 30000,
+   "capped": false,
+   "diverged": false,
+   "bf16": true,
+   "final_loss": 1.697049810900353e-06,
+   "minutes": 78.8,
+   "history": [
+    {
+     "step": 2500,
+     "loss": 1.5623438358306885,
+     "acc": 0.27734375
+    },
+    {
+     "step": 5000,
+     "loss": 0.0030936808325350285,
+     "acc": 1.0
+    },
+    {
+     "step": 7500,
+     "loss": 3.1266581572708674e-06,
+     "acc": 1.0
+    },
+    {
+     "step": 10000,
+     "loss": 0.0001860314077930525,
+     "acc": 1.0
+    },
+    {
+     "step": 12500,
+     "loss": 2.7098215014120797e-06,
+     "acc": 1.0
+    },
+    {
+     "step": 15000,
+     "loss": 5.013921054342063e-06,
+     "acc": 0.9990234375
+    },
+    {
+     "step": 17500,
+     "loss": 2.515337428121711e-06,
+     "acc": 1.0
+    },
+    {
+     "step": 20000,
+     "loss": 1.1266316732871928e-06,
+     "acc": 1.0
+    },
+    {
+     "step": 22500,
+     "loss": 6.302389579104783e-07,
+     "acc": 1.0
+    },
+    {
+     "step": 25000,
+     "loss": 3.5366551855986472e-06,
+     "acc": 1.0
+    },
+    {
+     "step": 27500,
+     "loss": 7.380725008943045e-08,
+     "acc": 1.0
+    },
+    {
+     "step": 30000,
+     "loss": 1.697049810900353e-06,
+     "acc": 1.0
+    }
+   ],
+   "test": {
+    "512": {
+     "normal": 1.0,
+     "keys": 0.2296142578125,
+     "values": 0.013427734375,
+     "true_recall": 0.7703857421875
+    },
+    "2048": {
+     "normal": 0.9954833984375,
+     "keys": 0.2216796875,
+     "values": 0.0191650390625,
+     "true_recall": 0.7738037109375
+    },
+    "8192": "n/a (model built for <= 2048 positions)"
+   },
+   "value_set_baseline": 0.25,
+   "chance": 0.015625,
+   "micro_batch": null
+  },
+  "16": {
+   "queries": 16,
+   "distinct": false,
+   "steps": 30000,
+   "capped": false,
+   "diverged": false,
+   "bf16": true,
+   "final_loss": 2.8166441917419434,
+   "minutes": 78.7,
+   "history": [
+    {
+     "step": 2500,
+     "loss": 2.9376354217529297,
+     "acc": 0.0634765625
+    },
+    {
+     "step": 5000,
+     "loss": 2.8744916915893555,
+     "acc": 0.064453125
+    },
+    {
+     "step": 7500,
+     "loss": 2.8460474014282227,
+     "acc": 0.048828125
+    },
+    {
+     "step": 10000,
+     "loss": 2.825683355331421,
+     "acc": 0.056640625
+    },
+    {
+     "step": 12500,
+     "loss": 2.852360725402832,
+     "acc": 0.0615234375
+    },
+    {
+     "step": 15000,
+     "loss": 2.8172481060028076,
+     "acc": 0.0537109375
+    },
+    {
+     "step": 17500,
+     "loss": 2.839972496032715,
+     "acc": 0.0498046875
+    },
+    {
+     "step": 20000,
+     "loss": 2.8314638137817383,
+     "acc": 0.0576171875
+    },
+    {
+     "step": 22500,
+     "loss": 2.8303298950195312,
+     "acc": 0.0576171875
+    },
+    {
+     "step": 25000,
+     "loss": 2.812079906463623,
+     "acc": 0.0634765625
+    },
+    {
+     "step": 27500,
+     "loss": 2.8136110305786133,
+     "acc": 0.052734375
+    },
+    {
+     "step": 30000,
+     "loss": 2.8166441917419434,
+     "acc": 0.0576171875
+    }
+   ],
+   "test": {
+    "512": {
+     "normal": 0.0616455078125,
+     "keys": 0.0621337890625,
+     "values": 0.012939453125,
+     "true_recall": -0.00048828125
+    },
+    "2048": {
+     "normal": 0.063720703125,
+     "keys": 0.0628662109375,
+     "values": 0.017578125,
+     "true_recall": 0.0008544921875
+    },
+    "8192": "n/a (model built for <= 2048 positions)"
+   },
+   "value_set_baseline": 0.0625,
+   "chance": 0.015625,
+   "micro_batch": null
+  }
+ },
+ "seconds": 9451.5
+}

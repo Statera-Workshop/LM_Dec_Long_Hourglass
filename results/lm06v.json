@@ -1,0 +1,120 @@
+{
+ "model": "hourglass",
+ "repo": "LM_2021_hourglass-transformer-pytorch",
+ "target_repo": "LM_Dec_Long_Hourglass",
+ "category": "Long",
+ "upstream": "lucidrains/hourglass-transformer-pytorch (MIT)",
+ "unified": [
+  "depth (2, 2, 2) instead of (4, 2, 4) to match the 6-layer budget"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm06v",
+ "started": "2026-11-02 08:31:07",
+ "smoke": false,
+ "weights": "lm06long_model.pt",
+ "rows": {
+  "512": {
+   "normal": {
+    "acc": 0.404296875,
+    "acc_updated": 0.75,
+    "acc_unchanged": 0.05859375,
+    "stale_rate": 0.00390625,
+    "by_distance": {
+     "0-256": [
+      0.656,
+      93
+     ],
+     "256-1024": [
+      0.379,
+      931
+     ],
+     "1024-4096": [
+      null,
+      0
+     ],
+     "4096-inf": [
+      null,
+      0
+     ]
+    }
+   },
+   "nohead": {
+    "acc": 0.3955078125,
+    "acc_updated": 0.734375,
+    "acc_unchanged": 0.056640625,
+    "stale_rate": 0.005859375,
+    "by_distance": {
+     "0-256": [
+      0.777,
+      103
+     ],
+     "256-1024": [
+      0.353,
+      921
+     ],
+     "1024-4096": [
+      null,
+      0
+     ],
+     "4096-inf": [
+      null,
+      0
+     ]
+    }
+   }
+  },
+  "2048": {
+   "normal": {
+    "acc": 0.3623046875,
+    "acc_updated": 0.671875,
+    "acc_unchanged": 0.052734375,
+    "stale_rate": 0.01171875,
+    "by_distance": {
+     "0-256": [
+      0.5,
+      2
+     ],
+     "256-1024": [
+      0.66,
+      103
+     ],
+     "1024-4096": [
+      0.329,
+      919
+     ],
+     "4096-inf": [
+      null,
+      0
+     ]
+    }
+   },
+   "nohead": {
+    "acc": 0.3583984375,
+    "acc_updated": 0.669921875,
+    "acc_unchanged": 0.046875,
+    "stale_rate": 0.0078125,
+    "by_distance": {
+     "0-256": [
+      null,
+      0
+     ],
+     "256-1024": [
+      0.616,
+      99
+     ],
+     "1024-4096": [
+      0.331,
+      925
+     ],
+     "4096-inf": [
+      null,
+      0
+     ]
+    }
+   }
+  },
+  "8192": "n/a"
+ },
+ "seconds": 12.3
+}

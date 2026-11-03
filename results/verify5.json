@@ -1,0 +1,28 @@
+{
+ "model": "hourglass",
+ "repo": "LM_2021_hourglass-transformer-pytorch",
+ "target_repo": "LM_Dec_Long_Hourglass",
+ "category": "Long",
+ "upstream": "lucidrains/hourglass-transformer-pytorch (MIT)",
+ "unified": [
+  "depth (2, 2, 2) instead of (4, 2, 4) to match the 6-layer budget"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "verify5",
+ "started": "2026-10-20 08:48:25",
+ "smoke": false,
+ "rows": {
+  "512": {
+   "normal": 0.999755859375,
+   "values": 0.021484375,
+   "keys": 0.05517578125
+  },
+  "2048": {
+   "normal": 1.0,
+   "values": 0.017333984375,
+   "keys": 0.03662109375
+  }
+ },
+ "seconds": 30.1
+}

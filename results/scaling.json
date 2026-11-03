@@ -1,0 +1,70 @@
+{
+ "model": "hourglass",
+ "repo": "LM_2021_hourglass-transformer-pytorch",
+ "target_repo": "LM_Dec_Long_Hourglass",
+ "category": "Long",
+ "upstream": "lucidrains/hourglass-transformer-pytorch (MIT)",
+ "unified": [
+  "depth (2, 2, 2) instead of (4, 2, 4) to match the 6-layer budget"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "scaling",
+ "started": "2026-10-19 14:23:00",
+ "smoke": false,
+ "rows": [
+  {
+   "len": 512,
+   "train": {
+    "peak_mb": 202.2,
+    "ms": 24.9
+   },
+   "infer": {
+    "peak_mb": 72.3,
+    "ms": 15.0
+   }
+  },
+  {
+   "len": 1024,
+   "train": {
+    "peak_mb": 415.2,
+    "ms": 24.5
+   },
+   "infer": {
+    "peak_mb": 141.5,
+    "ms": 10.0
+   }
+  },
+  {
+   "len": 2048,
+   "train": {
+    "peak_mb": 1386.8,
+    "ms": 46.4
+   },
+   "infer": {
+    "peak_mb": 401.5,
+    "ms": 17.0
+   }
+  },
+  {
+   "len": 4096,
+   "train": {
+    "peak_mb": 5221.6,
+    "ms": 127.2
+   },
+   "infer": {
+    "peak_mb": 1407.5,
+    "ms": 48.7
+   }
+  },
+  {
+   "len": 8192,
+   "train": "OOM",
+   "infer": {
+    "peak_mb": 5363.5,
+    "ms": 4434.2
+   }
+  }
+ ],
+ "seconds": 34.5
+}

@@ -1,0 +1,152 @@
+{
+ "model": "hourglass",
+ "repo": "LM_2021_hourglass-transformer-pytorch",
+ "target_repo": "LM_Dec_Long_Hourglass",
+ "category": "Long",
+ "upstream": "lucidrains/hourglass-transformer-pytorch (MIT)",
+ "unified": [
+  "depth (2, 2, 2) instead of (4, 2, 4) to match the 6-layer budget"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "lm06long",
+ "started": "2026-10-30 15:24:49",
+ "smoke": false,
+ "steps": 30000,
+ "capped": false,
+ "diverged": false,
+ "bf16": true,
+ "final_loss": 1.8994240760803223,
+ "minutes": 81.4,
+ "history": [
+  {
+   "step": 2500,
+   "loss": 2.728349208831787,
+   "acc": 0.26171875,
+   "acc_updated": 0.4765625,
+   "acc_unchanged": 0.046875,
+   "stale_rate": 0.015625
+  },
+  {
+   "step": 5000,
+   "loss": 2.204155921936035,
+   "acc": 0.31640625,
+   "acc_updated": 0.6015625,
+   "acc_unchanged": 0.03125,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 7500,
+   "loss": 2.002558708190918,
+   "acc": 0.38671875,
+   "acc_updated": 0.6875,
+   "acc_unchanged": 0.0859375,
+   "stale_rate": 0.0078125
+  },
+  {
+   "step": 10000,
+   "loss": 1.9107673168182373,
+   "acc": 0.3984375,
+   "acc_updated": 0.7265625,
+   "acc_unchanged": 0.0703125,
+   "stale_rate": 0.0234375
+  },
+  {
+   "step": 12500,
+   "loss": 1.840777039527893,
+   "acc": 0.39453125,
+   "acc_updated": 0.71875,
+   "acc_unchanged": 0.0703125,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 15000,
+   "loss": 1.8871725797653198,
+   "acc": 0.36328125,
+   "acc_updated": 0.671875,
+   "acc_unchanged": 0.0546875,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 17500,
+   "loss": 1.8170804977416992,
+   "acc": 0.38671875,
+   "acc_updated": 0.703125,
+   "acc_unchanged": 0.0703125,
+   "stale_rate": 0.0078125
+  },
+  {
+   "step": 20000,
+   "loss": 1.8303896188735962,
+   "acc": 0.3828125,
+   "acc_updated": 0.703125,
+   "acc_unchanged": 0.0625,
+   "stale_rate": 0.0078125
+  },
+  {
+   "step": 22500,
+   "loss": 1.8563458919525146,
+   "acc": 0.38671875,
+   "acc_updated": 0.7109375,
+   "acc_unchanged": 0.0625,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 25000,
+   "loss": 1.8390262126922607,
+   "acc": 0.3984375,
+   "acc_updated": 0.7421875,
+   "acc_unchanged": 0.0546875,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 27500,
+   "loss": 1.7984232902526855,
+   "acc": 0.38671875,
+   "acc_updated": 0.6875,
+   "acc_unchanged": 0.0859375,
+   "stale_rate": 0.0
+  },
+  {
+   "step": 30000,
+   "loss": 1.8994240760803223,
+   "acc": 0.39453125,
+   "acc_updated": 0.71875,
+   "acc_unchanged": 0.0703125,
+   "stale_rate": 0.0
+  }
+ ],
+ "test": {
+  "512": {
+   "acc": 0.39501953125,
+   "acc_updated": 0.7412109375,
+   "acc_unchanged": 0.048828125,
+   "stale_rate": 0.0078125
+  },
+  "2048": {
+   "acc": 0.3583984375,
+   "acc_updated": 0.669921875,
+   "acc_unchanged": 0.046875,
+   "stale_rate": 0.009765625
+  },
+  "8192": "n/a (model built for <= 2048 positions)"
+ },
+ "config": {
+  "pairs": 8,
+  "updates": 4,
+  "queries": 4,
+  "train_len": 512,
+  "test_lens": [
+   512,
+   2048,
+   8192
+  ],
+  "batch": 32,
+  "steps": 30000,
+  "eval_every": 2500,
+  "eval_samples": 512,
+  "max_hours": 5.0
+ },
+ "micro_batch": null,
+ "seconds": 4888.8
+}
