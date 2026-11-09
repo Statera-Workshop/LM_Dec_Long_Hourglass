@@ -4,7 +4,7 @@ Hourglass - Long family, decoder-only byte-level language model, standardised in
 
 ## Status
 
-- Verification level: **Benchmarked (2 seed-repeat runs, see results)**
+- Verification level: **Benchmarked (4 seed-repeat runs, see results)**
 - Failure class: none
 
 ## Provenance
@@ -31,6 +31,8 @@ All models share one protocol: 256-byte vocabulary, dim 512, 6 layers, 8 heads x
 - LM-05 recall `lm05v3long`: 4 pairs @ 512: 1.00 (keys removed 0.23); 4 pairs @ 2048: 1.00 (keys removed 0.22); 16 pairs @ 512: 0.07 (keys removed 0.07); 16 pairs @ 2048: 0.07 (keys removed 0.06)
 - LM-06 memory update `lm06`: @512: latest 0.70, unchanged 0.04, stale 0.01; @2048: latest 0.63, unchanged 0.05, stale 0.01
 - LM-06 memory update `lm06long`: @512: latest 0.74, unchanged 0.05, stale 0.01; @2048: latest 0.67, unchanged 0.05, stale 0.01
+- LM-06 memory update `lm06s2`: @512: latest 0.63, unchanged 0.05, stale 0.02; @2048: latest 0.52, unchanged 0.05, stale 0.03
+- LM-06 memory update `lm06s3`: @512: latest 0.66, unchanged 0.04, stale 0.01; @2048: latest 0.58, unchanged 0.04, stale 0.02
 
 ## Tests
 
